@@ -1,0 +1,26 @@
+﻿@model UserInfo
+
+@{
+    var durum = @Model.WillAttend == true ? "primary" : "danger";
+}
+
+<main class="text-center">
+    <h1>Katılımcı Detay</h1>
+    <p>
+        <span class="badge text-bg-@durum">
+            @if(Model.WillAttend == true)
+            {
+                <text>Katılıyorum</text>
+            }
+            else
+            {
+                <text>Katılmıyorum</text>
+            }
+        </span>
+    </p>
+    <p>İsim : @Model.Name</p>
+    <p>Email : @Model.Email</p>
+    <p>Telefon : @Model.Phone</p>
+
+    <a href="/meeting/list" class="btn btn-outline-@durum">Katılımcı Listesini Görüntüle</a>
+</main>

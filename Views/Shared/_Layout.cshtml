@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["title"] -- Meeting App</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  />
+
+</head>
+<body>
+
+
+    <div style="height: 6vh;font-weight: bold;font-size: 1.5vw;" class="bg-primary text-white p2 d-flex justify-content-center align-items-center">
+        Meeting App
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-6 mx-auto ">
+                <div class="card">
+                    <div class="card-body">
+                        @RenderBody();
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+@model UserInfo
+
+
+<h1 class="text-center">Toplantı Katılım formu</h1>
+<form action="" method="post">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Ad Soyad</label>
+        <input asp-for="Name" placeholder="Ad Soyad Giriniz" class="form-control">
+        <span asp-validation-for="Name" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label">Telefon</label>
+        <input asp-for="Phone" placeholder="Telefon no Giriniz" class="form-control">
+        <span asp-validation-for="Phone" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">E-posta</label>
+        <input asp-for="Email" placeholder="E-posta Giriniz" class="form-control">
+        <span asp-validation-for="Email" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="WillAttend" class="form-label">Katılım Durumu</label>
+        <select asp-for="WillAttend" class="form-select">
+            <option value="true">Evet,Geliyorum</option>
+            <option value="false">Hayır,Gelmiyorum</option>
+        </select>
+        <span asp-validation-for="WillAttend" class="text-danger small"></span>
+    </div>
+
+    <div class="mb-3">
+        <input type="submit"  class="form-control btn btn-outline-primary">
+    </div>
+
+</form>
